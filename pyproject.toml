@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dotenv-merge-cli"
+version = "1.0.0"
+description = "Merges multiple .env-style files into one, with later files overriding earlier keys."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "All Rights Reserved" }
+authors = [{ name = "sidcore-dev" }]
+keywords = ["env", "dotenv", "cli", "devtools", "merge"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Environment :: Console",
+    "Topic :: Software Development :: Build Tools",
+]
+
+[project.scripts]
+dotenv-merge-cli = "dotenv_merge_cli.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
